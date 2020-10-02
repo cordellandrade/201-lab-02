@@ -1,0 +1,9 @@
+body {
+  background-color: chartreuse;
+}
+
+h1{
+  margin: 15px;
+  font-size: large;
+  font-weight: bold;
+}
