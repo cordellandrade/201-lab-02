@@ -1,29 +1,5 @@
 'use strict';
 
-function addGreeting() {
-
-  var today = new Date();
-  var hourNow = today.getHours();
-  var greeting;
-  if (hourNow > 18) {
-    greeting = 'Good evening!';
-  } else if (hourNow > 12) {
-    greeting = 'Good afternoon!';
-  } else if (hourNow > 0) {
-    greeting = 'Good morning!';
-  } else {
-    greeting = 'Welcome!';
-  }
-  return document.write('<h3>' + greeting + '</h3>');
-}
-
-function askName() {
-  var userName = prompt('What is your name?');
-
-  return document.write('<h3>' + 'Hello, ' + userName + '</h3>');
-
-}
-
 
 function questionNumber1() {
   var response = prompt('Am I a student at Code Fellows?').toUpperCase();
@@ -76,8 +52,7 @@ function questionNumber5() {
   }
 }
 
-addGreeting();
-askName();
+
 questionNumber1();
 questionNumber2();
 questionNumber3();
