@@ -10,35 +10,6 @@
 
 </head>
 
-<script>
-    function addGreeting() {
-
-        var today = new Date();
-        var hourNow = today.getHours();
-        var greeting;
-        if (hourNow > 18) {
-            greeting = 'Good evening!';
-        } else if (hourNow > 12) {
-            greeting = 'Good afternoon!';
-        } else if (hourNow > 0) {
-            greeting = 'Good morning!';
-        } else {
-            greeting = 'Welcome!';
-        }
-        return document.write('<h3>' + greeting + '</h3>');
-    }
-
-    function askName() {
-        var userName = prompt('What is your name?');
-
-        return document.write('<h3>' + 'Hello, ' + userName + '</h3>');
-
-    }
-
-    addGreeting();
-    askName();
-</script>
-
 <body>
 
     <header>
@@ -78,15 +49,73 @@
 
 
     <h2>Job History</h2>
-    <p2>After coming home from college I first worked at a Scotia Bank branch as an intern then as an administrative assistant for the law firm, Maples and Calder for two and a half years. Now I'm currenly a customer service representative for a shipping
-        company, Miracle Brokers/ Aeropost. </p2>
+    <ol>
+        <ul>
+            <li>Aeropost 2020-Present</li>
+        </ul>
+        <ol>
+            <ul>
+                <li>Sea Elements 2019-2020</li>
+            </ul>
+            <ol>
+                <ul>
+                    <li>Maples and Calder 2016-2018</li>
+                </ul>
+                <ol>
+                    <ul>
+                        <li>Scotia Bank 2015-2015</li>
+                    </ul>
+                </ol>
 
-    <h2>Goals</h2>
-    <p3>My goal is to become procient in coding. Use coding while working for a company using the SQL, Pyton languages to help the company build databases advising and to ensure efficient business managment. </p3>
 
-    <p3>Eventually I want to start a business using such methods to advise other companies and individuals.</p3>
+                <h2>Goals</h2>
+                <p3>My goal is to become procient in coding. Use coding while working for a company using the SQL, Pyton languages to help the company build databases advising and to ensure efficient business managment. </p3>
 
-    <script src="js/app.js"></script>
+                <p3>Eventually I want to start a business using such methods to advise other companies and individuals.</p3>
+
+                <h2>My top 10 Movie List</h2>
+                <ol>
+                    <ul>
+                        <li>1. The Matrix Trilogy</li>
+                    </ul>
+                    <ol>
+                        <ul>
+                            <li>2. The Social Network</li>
+                        </ul>
+                        <ol>
+                            <ul>
+                                <li>3. Star Wars Series</li>
+                            </ul>
+                            <ol>
+                                <ul>
+                                    <li>4. The Wolf on Wallstreet</li>
+                                </ul>
+                                <ol>
+                                    <ul>
+                                        <li>5. Inception </li>
+                                    </ul>
+                                    <ol>
+                                        <ul>
+                                            <li>6. The Great Gasby</li>
+                                        </ul>
+                                        <ol>
+                                            <ul>
+                                                <li>7. IT</li>
+                                            </ul>
+                                            <ol>
+                                                <ul>
+                                                    <li>8. IT part 2</li>
+                                                </ul>
+                                                <ol>
+                                                    <ul>
+                                                        <li>9. Shutter Island</li>
+                                                    </ul>
+                                                    <ol>
+                                                        <ul>
+                                                            <li>10. The Departed</li>
+                                                        </ul>
+
+                                                        <script src="js/app.js"></script>
 </body>
 
 </html>
