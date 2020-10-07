@@ -1,6 +1,6 @@
 'use strict';
 
-var  userPoints  =  0;
+
 
 function addGreeting() {
 
@@ -29,7 +29,7 @@ function askName() {
 addGreeting();
 askName();
 
-
+var  userPoints  =  0;
 
 
 // function questionNumber1() {
@@ -46,11 +46,14 @@ if (response === 'YES' || response === 'Y') {
 var response = prompt('Do I live in the US?').toUpperCase();
 
 var message;
-if (response === 'YES' || response === 'Y') {
+if (response === 'NO' || response === 'N') {
     // console.log('Wrong! I live in the Caribbean')
-    alert('Wrong! I live in the Caribbean');
+    alert('Correct! I live in the Caribbean');
     userPoints++;
 }
+
+
+
 // }
 
 // function questionNumber3() {
@@ -173,17 +176,20 @@ while  (tries  >  0)  {
     console.log(answer);
 
         
-    var  moviesILike  =   ['The Matrix',  'The wolf on wall street',  'Starwars',  'IT',  'The Departed'];
+    var  moviesILike  =   ['The Matrix ',  'The wolf on wall street ',  'Starwars ',  'IT ',  'The Departed'];
 
         
-    for  (var  i  =  0;  i  <  moviesILike.length;  i++)  {         console.log(moviesILike[i]);     }
+    for  (var  i  =  0;  i  <  moviesILike.length;  i++)  {        
+        console.log(moviesILike[i]);    
+    }
 
         
     if  (answer  ===  '2'  ||  answer  ===  2)  {        
         // if it's correct, give them a point
                 
         userPoints++;        
-        alert('Correct!'); 
+        alert('Correct!  Movies I like to watch are, ' + moviesILike + '.'); 
+        alert('you have '  +  userPoints  +  ' points.');
         break;   
     } 
     else  {         // if it's not correct, tell them to try again
@@ -194,10 +200,12 @@ while  (tries  >  0)  {
 
     if (tries == 0) {
         alert('You ran out of tries.  Movies I like to watch are, ' + moviesILike + '.');
+        alert('you have '  +  userPoints  +  ' points.');
         break;
 
+
+
     }
-    alert('you have '  +  userPoints  +  ' points.');
 
 }
 
