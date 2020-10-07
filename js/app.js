@@ -1,5 +1,7 @@
 'use strict';
 
+var  userPoints  =  0;
+
 function addGreeting() {
 
     var today = new Date();
@@ -36,6 +38,7 @@ var response = prompt('Am I a student at Code Fellows?').toUpperCase();
 if (response === 'YES' || response === 'Y') {
     // console.log('Correct! I am a student at Code Fellows')
     alert('Correct! I am a student at Code Fellows');
+    userPoints++;
 }
 // }
 
@@ -46,6 +49,7 @@ var message;
 if (response === 'YES' || response === 'Y') {
     // console.log('Wrong! I live in the Caribbean')
     alert('Wrong! I live in the Caribbean');
+    userPoints++;
 }
 // }
 
@@ -56,6 +60,7 @@ var message;
 if (response === 'YES' || response === 'Y') {
     // console.log('Correct!')
     alert('Correct!');
+    userPoints++;
 }
 // }
 
@@ -67,6 +72,7 @@ var message;
 if (response === 'YES' || response === 'Y') {
     // console.log('Correct!')
     alert('Correct!');
+    userPoints++;
 }
 // }
 
@@ -78,8 +84,9 @@ var message;
 if (response === 'YES' || response === 'Y') {
     // console.log('Correct!')
     alert('Correct!');
+    userPoints++;
 }
-// }
+
 
 
 
@@ -92,6 +99,7 @@ questionNumber5(); */
 
 
 // Initial setup of variables.
+
 var lowerLimit = 1;
 var upperLimit = 10;
 var tries = 4;
@@ -135,6 +143,7 @@ while (tries > 0) {
         // been guessed so let the user know and break out of the loop.
         else {
             alert('Great job, you got it!');
+            userPoints++;
             break;
         }
     }
@@ -149,3 +158,50 @@ while (tries > 0) {
 if (tries == 0) {
     alert('You ran out of tries.  The number was ' + answer + '.');
 }
+
+
+//7th Question
+
+
+var  tries  =  6;
+
+while  (tries  >  0)  {
+
+
+        
+    var  answer  =  prompt('Is 1. the Wolf on Wall Street, Starwars, and 50 shades of grey.  2. The Wolf on Wall Street, Starwars, and The Departed or   3. The Wolf on Wall Street, Starwars, and Transformers some of my favorite movies to watch?',  'Enter 1, 2, or 3 to answer').toLowerCase();    
+    console.log(answer);
+
+        
+    var  moviesILike  =   ['The Matrix',  'The wolf on wall street',  'Starwars',  'IT',  'The Departed'];
+
+        
+    for  (var  i  =  0;  i  <  moviesILike.length;  i++)  {         console.log(moviesILike[i]);     }
+
+        
+    if  (answer  ===  '2'  ||  answer  ===  2)  {        
+        // if it's correct, give them a point
+                
+        userPoints++;        
+        alert('Correct!'); 
+        break;   
+    } 
+    else  {         // if it's not correct, tell them to try again
+                 alert('Wrong! try again');     }
+
+    tries = tries - 1;
+
+
+    if (tries == 0) {
+        alert('You ran out of tries.  Movies I like to watch are, ' + moviesILike + '.');
+        break;
+
+    }
+    alert('you have '  +  userPoints  +  ' points.');
+
+}
+
+
+
+
+    
