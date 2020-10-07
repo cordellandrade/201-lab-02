@@ -188,7 +188,7 @@ while  (tries  >  0)  {
         // if it's correct, give them a point
                 
         userPoints++;        
-        alert('Correct!  Movies I like to watch are, ' + moviesILike + '.'); 
+        alert('Correct!'); 
         alert('you have '  +  userPoints  +  ' points.');
         break;   
     } 
