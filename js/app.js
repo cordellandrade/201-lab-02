@@ -171,11 +171,12 @@ var  tries  =  6;
 while  (tries  >  0)  {
 
 
+
         
     var  answer  =  prompt('Is 1. the Wolf on Wall Street, Starwars, and 50 shades of grey.  2. The Wolf on Wall Street, Starwars, and The Departed or   3. The Wolf on Wall Street, Starwars, and Transformers some of my favorite movies to watch?',  'Enter 1, 2, or 3 to answer').toLowerCase();    
     console.log(answer);
 
-        
+
     var  moviesILike  =   ['The Matrix ',  'The wolf on wall street ',  'Starwars ',  'IT ',  'The Departed'];
 
         
