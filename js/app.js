@@ -149,7 +149,7 @@ if (!correctGuess) {
 
 //7th Question
 
-var whatMovie = ['the matrix', 'transformers', 'fifty shades of grey', 'the departer']
+var whatMovie = ['the matrix', 'starwars', 'inception', 'the departer']
 var guessAnswer = prompt(' Can you guess what movie is my favorite?');
 var attemptsRemaining = 6;
 var answeredCorrect = false;
