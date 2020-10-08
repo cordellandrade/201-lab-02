@@ -2,7 +2,7 @@
 
 
 
-function addGreeting() {
+/* function addGreeting() {
 
     var today = new Date();
     var hourNow = today.getHours();
@@ -19,15 +19,28 @@ function addGreeting() {
     return document.write('<h3>' + greeting + '</h3>');
 }
 
-function askName() {
+ function askName() {
     var userName = prompt('What is your name?');
 
     return document.write('<h3>' + 'Hello, ' + userName + '</h3>');
 
 }
 
-addGreeting();
-askName();
+addGreeting(); 
+askName(); */
+
+var user = prompt('What is your name?');
+
+// while (user === '' || user === null) {
+// this is the shorter version of the above expression. it uses type coercion to our advantage
+{
+    while (!user) {
+        user = prompt('What is your name? Really, we need it.');
+    }
+
+    alert('Hi ' + user + '! I am so glad you decided to come to my site.');
+
+}
 
 var  userPoints  =  0;
 
@@ -40,6 +53,7 @@ if (response === 'YES' || response === 'Y') {
     alert('Correct! I am a student at Code Fellows');
     userPoints++;
 }
+
 // }
 
 // function questionNumber2() {
@@ -103,6 +117,9 @@ questionNumber5(); */
 
 // Initial setup of variables.
 
+alert('Welcome to my guessing game!');
+
+/*
 var lowerLimit = 1;
 var upperLimit = 10;
 var tries = 4;
@@ -161,56 +178,58 @@ while (tries > 0) {
 if (tries == 0) {
     alert('You ran out of tries.  The number was ' + answer + '.');
 }
+*/
 
+// How Ryan created it in class
 
-//7th Question
+var tries = 0;
+var guessNumber = 7; // correct answer
+var correctGuess = false;
 
-
-var  tries  =  6;
-
-while  (tries  >  0)  {
-
-
-
-        
-    var  answer  =  prompt('Is 1. the Wolf on Wall Street, Starwars, and 50 shades of grey.  2. The Wolf on Wall Street, Starwars, and The Departed or   3. The Wolf on Wall Street, Starwars, and Transformers some of my favorite movies to watch?',  'Enter 1, 2, or 3 to answer').toLowerCase();    
-    console.log(answer);
-
-
-    var  moviesILike  =   ['The Matrix ',  'The wolf on wall street ',  'Starwars ',  'IT ',  'The Departed'];
-
-        
-    for  (var  i  =  0;  i  <  moviesILike.length;  i++)  {        
-        console.log(moviesILike[i]);    
+while (tries < 3 && !correctGuess) {
+    tries++;
+    var guessGame = parseInt(prompt('I\'m thinking of a number from 1 - 10, can you guess the number?'));
+    console.log(typeof guessGame, guessGame);
+    if (guessGame < guessNumber) {
+        alert(`Sorry ${user} that guess is too low`)
+    } else if (guessGame > guessNumber) {
+        alert(`Sorry ${user} that guess is too high`)
+    } else if (guessGame === 7) {
+        alert(`Correct ${user} !`)
+        correctGuess = true;
     }
+}
 
-        
-    if  (answer  ===  '2'  ||  answer  ===  2)  {        
-        // if it's correct, give them a point
-                
-        userPoints++;        
-        alert('Correct!'); 
-        alert('you have '  +  userPoints  +  ' points.');
-        break;   
-    } 
-    else  {         // if it's not correct, tell them to try again
-                 alert('Wrong! try again');     }
-
-    tries = tries - 1;
-
-
-    if (tries == 0) {
-        alert('You ran out of tries.  Movies I like to watch are, ' + moviesILike + '.');
-        alert('you have '  +  userPoints  +  ' points.');
-        break;
-
-
-
-    }
-
+if (!correctGuess) {
+    alert(`
+            You 're out of guesses, the correct one was  ${guessNumber}`);
 }
 
 
 
 
-    
+
+//7th Question
+
+var whatMovie = ['the matrix', 'transformers', 'fifty shades of grey', 'the departer']
+var guessAnswer = prompt(' Can you guess what movie is my favorite?');
+var attemptsRemaining = 6;
+var answeredCorrect = false;
+
+while (attemptsRemaining > 0 && !answeredCorrect) {
+    attemptsRemaining--;
+    for (var i = 0; i < whatMovie.length; i++) {
+        if (guessAnswer === whatMovie[i]) {
+            answeredCorrect = true;
+            alert(`My favorite movie to watch is ${guessAnswer}`);
+        }
+    }
+    if (attemptsRemaining > 0 && !answeredCorrect) {
+        guessAnswer = prompt('Sorry that wasn\'t a correct answer please try again!');
+    }
+    if (attemptsRemaining === 0 && !answeredCorrect) {
+        alert('Sorry you\'re out of tries!');
+    }
+}
+
+alert('you have '  +  userPoints  +  ' points.');
