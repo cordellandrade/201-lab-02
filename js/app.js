@@ -170,4 +170,8 @@ while (attemptsRemaining > 0 && !answeredCorrect) {
     }
 }
 
+if (!answeredCorrect) {
+    alert(`Thanks for playing, ${user}, the correct answer was the matrix :)`)
+}
+
 alert('you have '  +  userPoints  +  ' points.');
