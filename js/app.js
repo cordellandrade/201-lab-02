@@ -145,6 +145,7 @@ function questionNumber6() {
         } else if (guessGame === 7) {
             alert(`Correct ${user} !`)
             correctGuess = true;
+            userPoints++;
         }
     }
 
@@ -174,7 +175,9 @@ function questionNumber7() {
         for (var i = 0; i < whatMovie.length; i++) {
             if (guessAnswer === whatMovie[i]) {
                 answeredCorrect = true;
+                userPoints++;
                 alert(`My favorite movie to watch is ${guessAnswer}`);
+
             }
         }
         if (attemptsRemaining > 0 && !answeredCorrect) {
